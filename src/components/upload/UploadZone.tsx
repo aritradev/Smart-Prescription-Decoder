@@ -78,7 +78,7 @@ export default function UploadZone({ onImageSelected, isDecoding, disabled }: Up
     disabled: isDecoding || disabled,
   });
 
-  const dropzoneProps = getRootProps() as any;
+  const dropzoneRootProps = getRootProps() as any;
 
   const handleClear = () => {
     setPreview(null);
@@ -119,7 +119,7 @@ export default function UploadZone({ onImageSelected, isDecoding, disabled }: Up
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.98 }}
-            {...dropzoneProps}
+            {...dropzoneRootProps}
             className={`relative group cursor-pointer rounded-3xl p-8 sm:p-12 text-center transition-all duration-300 glass-panel border-2 border-dashed ${
               isDragActive
                 ? 'border-brand-light bg-brand-teal/10 scale-[1.01]'
